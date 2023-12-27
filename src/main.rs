@@ -1,25 +1,13 @@
-struct Test
-{
-    x : i32,
-    y : i32,
-}
+use gst::prelude::*;
+use anyhow::Error;
+use gstrswebrtc::webrtcsink;
+fn main() -> Result<(), Error>{
+    gst::init()?;
+    let pipeline = gst::Pipeline::new();
+    let video_src: gst::Element = gst::ElementFactory::make("videotestsrc").build().unwrap();
+    //let video_sink = webrtcsink::WebRTCSin, signal_name, after, callback));
 
-impl Test
-{
-    fn new() -> Test
-    {
-        print!("Init Test");
-        Test{x: 0, y: 0}
-    }
+    //pipeline.add_many([&video_src, &video_sink]).unwrap();
 
-    fn get(&self) -> i32
-    {
-        0
-    }
-}
-
-fn main() {
-    let test = Test::new();
-    
-    println!("Hello, world! {}", test.x);
+    Ok(())
 }
