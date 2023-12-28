@@ -1,0 +1,3 @@
+[submodule "gst-plugins"]
+	path = gst-plugins
+	url = git@gitlab.freedesktop.org:gstreamer/gst-plugins-rs.git

@@ -7,7 +7,7 @@ fn main() -> Result<(), Error>{
     let video_src: gst::Element = gst::ElementFactory::make("videotestsrc").build().unwrap();
     //let video_sink = webrtcsink::WebRTCSin, signal_name, after, callback));
 
-    //pipeline.add_many([&video_src, &video_sink]).unwrap();
+    
 
     Ok(())
 }
